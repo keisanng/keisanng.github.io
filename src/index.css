@@ -61,6 +61,16 @@ body {
     width: calc(100vw - (var(--margin) * 2));
   }
 
+  &>header {
+    display: flex;
+    align-items: center;
+
+    &>a>svg {
+      width: max(2rem, 5vmin);
+      height: max(2rem, 5vmin);
+    }
+  }
+
   &>main {
     display: grid;
     align-items: center;
