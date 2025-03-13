@@ -31,6 +31,7 @@
 :root {
   --c-fg: black;
   --c-bg: #FAF9F6;
+  --margin: 6vmin;
   --font-medium: max(2vmin, 1.1rem);
 }
 
@@ -45,8 +46,9 @@
 }
 
 body {
-  height: 100vh;
-  overflow-x: hidden;
+  height: calc(100vh - (var(--margin) * 2));
+  width: calc(100vw - (var(--margin) * 2));
+  padding: var(--margin);
   background-color: var(--c-bg);
   font-family: 'Vollkorn';
   font-size: var(--font-medium);
@@ -54,6 +56,10 @@ body {
   display: grid;
   grid-template-rows: 10% 80% 10%;
   animation: intro 1s ease;
+
+  &>* {
+    width: calc(100vw - (var(--margin) * 2));
+  }
 
   &>main {
     display: grid;
