@@ -81,7 +81,6 @@ body {
 
     &>social {
       &>a {
-        color: var(--c-fg);
         display: flex;
         text-decoration: none;
       }
@@ -91,6 +90,10 @@ body {
       }
     }
   }
+}
+
+a {
+  color: var(--c-fg);
 }
 
 svg {
